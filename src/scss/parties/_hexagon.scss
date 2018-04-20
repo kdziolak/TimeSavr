@@ -1,0 +1,148 @@
+.hexagon-container {
+        .hex-1,
+        .hex-2,
+        .hex-3,
+        .hex-4,
+        .hex-5,
+        .hex-6 {
+            position: absolute;
+            z-index: -1;
+    }
+    .hex-1{
+         animation: rescale 90s infinite;
+            animation-timing-function: linear;
+    }
+    .hex-2{
+        animation: rescale 70s infinite;
+            animation-timing-function: linear;
+    }
+    .hex-3{
+        animation: rescale 80s infinite;
+            animation-timing-function: linear;
+    }
+};
+
+@media (max-width: 351px) {
+        .hex-1 {
+            top: 10vh;
+            right: -2rem;
+        }
+        .hex-2 {
+            top: 60vh;
+            left: -3.5rem;
+        }
+        .hex-3 {
+            top: 7vh;
+            left: -2rem;
+        }
+        .hex-4 {
+            z-index: 0;
+            top: 365vh;
+            right: -5rem;
+        }
+        .hex-5 {
+            top: 590vh;
+            z-index: -10;
+            left: -1.5rem;
+            opacity: 0.5;
+            transform: rotate(50deg);
+        }
+        .hex-6 {
+            top: 600vh;
+            right: -6.5rem;
+            opacity: 0.5;
+            transform: scale(0.7);
+        }
+    
+};
+
+@media (min-width: 351px) {
+        .hex-1 {
+            top: 15vh;
+            right: -3rem;
+            transform: scale(1.9);
+        }
+        .hex-2 {
+            top: 70vh;
+            left: -3rem;
+
+        }
+        .hex-3 {
+            top: 7vh;
+            left: -2rem;
+        }
+        .hex-4 {
+            z-index: 0;
+            top: 345vh;
+            right: -5rem;
+        }
+        .hex-5 {
+            top: 560vh;
+            z-index: -10;
+            left: -1.5rem;
+            opacity: 0.5;
+            transform: rotate(50deg);
+        }
+        .hex-6 {
+            top: 590vh;
+            right: -6.5rem;
+            opacity: 0.5;
+            transform: scale(0.7);
+        }
+    
+};
+
+@media (min-width: 388px) {
+        .hex-1 {
+            top: 15vh;
+            right: -3rem;
+        }
+        .hex-2 {
+            top: 70vh;
+            left: -3rem;
+        }
+        .hex-3 {
+            top: 7vh;
+            left: -2rem;
+        }
+        .hex-4 {
+            z-index: 0;
+            top: 345vh;
+            right: -5rem;
+        }
+        .hex-5 {
+            top: 540vh;
+            z-index: -10;
+            left: -1.5rem;
+            opacity: 0.5;
+            transform: rotate(50deg);
+        }
+        .hex-6 {
+            top: 570vh;
+            right: -6.5rem;
+            opacity: 0.5;
+            transform: scale(0.7);
+        }
+    
+};
+
+
+@keyframes rescale {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+@media (min-width: 388px){
+    @keyframes rescale {
+        0% {
+            transform: scale(1.2) rotate(0deg);
+        }
+        100% {
+            transform: scale(1.2) rotate(360deg);
+        }
+    }
+}

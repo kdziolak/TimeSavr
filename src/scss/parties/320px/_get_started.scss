@@ -1,0 +1,85 @@
+footer{
+    position: relative;
+     background: linear-gradient(to bottom, $bg-color-sky, $bg-color);
+    z-index: -10;
+    div{
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2vh;
+            padding: $padding-320;
+            padding-top: 5vh;
+        h4{
+            font-size: $fs-n*0.65;
+            color: $dark-orange;
+        }
+        h2{
+            font-size: $fs-m*0.45;
+            line-height: $line-height*.9;
+            text-align: center;
+            margin-bottom: 2vh;
+            }
+        }
+    }
+    .get-started{
+        .get-started-form{
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 5vh;
+            .get-started-email{
+                background: transparent;
+                border: none;
+                outline:none;
+                border-bottom: 1px solid $social-bg;
+                padding-bottom: 0.3rem;
+                font-size: $fs-n*0.55;
+                &:focus::placeholder{
+                    color: transparent;
+                }
+                &::placeholder{
+                    font-weight: $fw-b;
+                }
+            }
+            .get-started-btn{
+                border:none;
+                color: white;
+                background-color: $btn-color;
+                font-weight: $fw-b;
+                border-radius: 2px;
+                padding: .7rem .6rem .7rem .6rem;
+            }
+        }
+        .social-media-list{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-top: 5vh;
+            .social-item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20px;
+                height: 20px;
+                margin: 0.5rem;
+                padding: 1rem;
+                background: $social-bg;
+                border-radius: 50%;
+                font-size: $fs-n*.75;
+                a{
+                    color: $bg-color;
+                }
+            }
+        }
+    }
+    .copyright{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        font-size: $fs-n*0.5;
+        font-family: $ff-ssp;
+        text-align: center;
+    }
+}
