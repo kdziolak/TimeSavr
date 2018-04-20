@@ -1,0 +1,144 @@
+header {
+    .top-header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .logo-section{
+            width:inherit;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .logo-link{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 40%;
+                height: inherit;
+                text-decoration: none;
+                margin-left: .5rem;
+                .logo{
+                    height: 1.6rem;
+                    width: 1.6rem;
+                }
+                .title{
+                    font-size: $fs-n*0.9;
+                    color: $text;
+                }
+            }
+            
+            .fa-bars    {
+                position: fixed;
+                font-size: $fs-n*0.9;
+                margin-right: 1rem;
+                z-index: 21;
+                padding: 0.5rem;
+                right: 0;
+            }
+        }
+        nav {
+            .menu-list{
+                position: fixed;
+                z-index: 20;
+                height: 90vh;
+                width: 55%;
+                right: -70%;
+                top: 0;
+                background-color: rgba($bg-color-sky, 0.95);
+                box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+                list-style-type: none;
+                padding-top: 10vh;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                transition: .3s linear;
+                .list-item{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: right;
+                    padding-right: 1rem;
+                    margin-top: 4vh;
+                    font-size: $fs-n*0.7;
+                    .underline{
+                        width: 7rem;
+                        align-self: flex-end;
+                        border-top: 3px solid $social-bg;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .main-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: $padding-320;
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .main-title{
+                font-size: $fs-b*0.4;
+                font-weight: $fw-b;
+                margin-top: 20vh;
+                margin-bottom: 0.5em;
+            }
+            .main-description{
+                font-family: $ff-ssp;
+                font-weight: $fw-l;
+                font-size: $fs-n*0.6;
+                line-height: 1.5em;
+            }
+        }
+        .start-saving-time{
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 5vh;
+            .email{
+                border: none;
+                outline:none;
+                border-bottom: 1px solid $social-bg;
+                padding-bottom: 0.3rem;
+                font-size: $fs-n*0.55;
+                &:focus::placeholder{
+                    color: transparent;
+                }
+                &::placeholder{
+                    font-weight: $fw-b;
+                }
+            }
+            .btn{
+                border:none;
+                color: white;
+                background-color: $btn-color;
+                font-weight: $fw-b;
+                font-size: $fs-n*0.5;
+                border-radius: 2px;
+                padding: .7rem .6rem .7rem .6rem;
+            }
+        }
+    }
+    .companies-logos{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        line-height: $line-height;
+        font-size: $fs-n*.6;
+        padding: $padding-320;
+        margin-top: 10vh;
+        list-style-type: none;
+        font-weight: $fw-b;
+        color: $social-bg;
+        .company-item{
+            margin-right: 0.7rem;
+        }
+    }
+}

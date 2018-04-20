@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,700,700i|Source+Sans+Pro:300,300i,400,700&subset=latin-ext');
+
+$ff-c: 'Cabin', sans-serif;
+$ff-ssp: 'Source Sans Pro', sans-serif;
+
+$fw-l: 300;
+$fw-n: 400;
+$fw-b: 700;
+
+$fs-n: 29px;
+$fs-m: 72px;
+$fs-b: 105px;
+
+$line-height: 1.5em;
+
+$padding-320: 0 1rem 0 1rem;
+
+@mixin hex($w: 10em, $h: 17.32em, $t: 30deg ) {
+  width: $w;
+  height: $h;
+  transition: opacity .5s;
+  transform: rotate($t);
+};
+
+%before-after{
+  position: absolute;
+  width: inherit; height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: '';
+};
+
+@mixin rotate-before($r: rotate(60deg)) {
+   transform: $r;
+};
+
+@mixin rotate-after($r: rotate(-60deg)) {
+  transform: $r;
+};

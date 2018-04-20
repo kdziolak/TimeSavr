@@ -1,0 +1,36 @@
+main{
+    .testimonials{
+        background-color: $bg-color-sky;
+        .testimonials-slider{
+            .testimonials-slider-card{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: .5rem;
+                margin: 1.3rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                border-radius: 10px;
+                background-color: white;
+                box-shadow: 0 0 60px 2px rgba(black, 0.1);
+                .testimonials-quotation{
+                    font-size: $fs-n*0.65;
+                    text-align: center;
+                    font-family: $ff-ssp;
+                    letter-spacing: .5px;
+                    font-weight: $fw-l;
+                    line-height: $line-height;
+                }
+                .who-quotation{
+                    font-size: $fs-n*0.5;
+                    margin-top: 1vh;
+                    margin-bottom: 1vh;
+                    .person{
+                        font-weight: $fw-b;
+                    }
+                }
+            }
+        }
+    }
+}
