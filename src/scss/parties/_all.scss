@@ -1,28 +1,30 @@
-*{margin: 0; padding: 0;}
+* {
+    margin: 0;
+    padding: 0;
+}
 
-body{
+body {
     font-size: $fs-n;
     font-weight: $fw-n;
     line-height: $line-height;
     font-family: $ff-c;
     color: $text;
     overflow-x: hidden;
-};
+}
+
+;
 
 @import 'hexagon';
 
-@media (max-width: 351px) {
-    @import '320px/header';
-    @import '320px/features';
-    @import '320px/in_doubt';
-    @import '320px/testimonials';
-    @import '320px/get_started';    
-}
+@import 'mobiles/header';
+@import 'mobiles/features';
+@import 'mobiles/in_doubt';
+@import 'mobiles/testimonials';
+@import 'mobiles/get_started';
 
-@media (min-width: 351px) {
-    @import '400px/header';
-    @import '400px/features';
-    @import '400px/in_doubt';
-    @import '400px/testimonials';
-    @import '400px/get_started';    
+@media (min-width: 768px){
+    @import 'tablets/header';
+    @import 'tablets/features';
+    @import 'tablets/in_doubt';
+    @import 'tablets/get_started';
 }

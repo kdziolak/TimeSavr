@@ -70,55 +70,56 @@ const menu = e => {
 list.addEventListener('click', getChild);
 document.addEventListener('click', menu);
 
-$(document).ready(function(){
-          $('.slider').slick({
-              centerMode: true,
-              centerPadding: '60px',
-              slidesToShow: 3,
-              responsive: [
-                {
-                  breakpoint: 768,
-                  settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                  }
-                },
-                {
-                  breakpoint: 480,
-                  settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                  }
-                }
-              ]
-          });
+
+        $(document).ready(function() {
+            $('.slider').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                variableWidth: true,
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
             $('.testimonials-slider').slick({
-              centerMode: true,
-              centerPadding: '60px',
-              slidesToShow: 3,
-              responsive: [
-                {
-                  breakpoint: 768,
-                  settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                  }
-                },
-                {
-                  breakpoint: 480,
-                  settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                  }
-                }
-              ]
-          });
+                responsive: [{
+                        breakpoint: 800,
+                        settings: {
+                            variableWidth: true,
+                            dots: true,
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1,
+                            prevArrow: "<button type='button' class='slick-prev pull-left testimonials-left'><span class='fa fa-angle-left' aria-hidden='true'></span></button>",
+                            nextArrow: "<button type='button' class='slick-next pull-left testimonials-right'><span class='fa fa-angle-right' aria-hidden='true'></span></button>",
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
         });

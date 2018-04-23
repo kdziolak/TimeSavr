@@ -3,10 +3,10 @@ header {
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
+        padding-top: .5rem;
         .logo-section{
-            width:inherit;
+            width:25%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -14,15 +14,16 @@ header {
             .logo-link{
                 display: flex;
                 flex-direction: row;
-                justify-content: space-around;
+                justify-content: flex-start;
                 align-items: center;
                 width: 40%;
                 height: inherit;
                 text-decoration: none;
-                margin-left: .5rem;
+                margin-left: 2rem;
                 .logo{
-                    height: 1.4rem;
-                    width: 1.4rem;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    margin-right: 0.3rem;
                 }
                 .title{
                     font-size: $fs-n*0.8;
@@ -30,9 +31,13 @@ header {
                 }
             }
             
-            .fa-bars    {
+            .fa-bars  {
+                display: none;
                 position: fixed;
-                font-size: $fs-n*0.8;
+                font-size: $fs-n*0.5;
+                @media (min-width: 351px) {
+                    font-size: $fs-n*0.85;
+                }
                 margin-right: 1rem;
                 z-index: 21;
                 padding: 0.5rem;
@@ -40,29 +45,36 @@ header {
             }
         }
         nav {
+            width: 60%;
             .menu-list{
-                position: fixed;
+                margin-top: 1rem;
+                display: flex;
+                justify-content: space-around;
+                position:absolute;
                 z-index: 20;
-                height: 90vh;
-                width: 55%;
-                right: -70%;
+                width: inherit;
+                height: 4vh;
+                right: 0;
                 top: 0;
-                background-color: rgba($bg-color-sky, 0.95);
-                box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+                background-color: transparent;
+                box-shadow: none;
                 list-style-type: none;
-                padding-top: 10vh;
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
-                transition: .3s linear;
+                padding-top: 0vh;
+                border-radius: 0;
+                transition: none;
+                margin-right: 10px;
                 .list-item{
-                    display: flex;
+                    display: inline-flex;
                     flex-direction: column;
-                    text-align: right;
-                    padding-right: 1rem;
-                    margin-top: 4vh;
-                    font-size: $fs-n*0.7;
+                    justify-content: flex-end;
+                    text-align: center;
+                    padding-right: 0rem;
+                    margin-top: 0vh;
+                    font-size: $fs-n*0.5;  
+                    border-bottom: 3px solid orange;
                     .underline{
-                        width: 7rem;
+                        display: none;
+                        width: 3rem;
                         align-self: flex-end;
                         border-top: 3px solid $social-bg;
                         border-radius: 5px;
@@ -75,32 +87,37 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        padding: $padding-320;
+        align-items: flex-start;
+        padding: 0;
+        width: 80%;
         section{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: left;
+            margin-left:5rem;
             .main-title{
-                font-size: $fs-b*0.35;
+                font-size: $fs-b*0.5;
                 font-weight: $fw-b;
-                margin-top: 20vh;
+                margin-top: 15vh;
                 margin-bottom: 0.5em;
             }
             .main-description{
                 font-family: $ff-ssp;
                 font-weight: $fw-l;
-                font-size: $fs-n*0.5;
+                font-size: $fs-n*0.6;
+                width: 70%;
                 line-height: 1.5em;
             }
         }
         .start-saving-time{
-            height: 20vh;
+            width: 60%;
+            height: 10vh;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row;
+            align-items: flex-start;
             justify-content: space-around;
+            margin-left: 5rem;
             margin-top: 5vh;
             .email{
                 border: none;
@@ -108,6 +125,9 @@ header {
                 border-bottom: 1px solid $social-bg;
                 padding-bottom: 0.3rem;
                 font-size: $fs-n*0.5;
+                @media (min-width: 351px) {
+                    font-size: $fs-n*0.55;
+                }
                 &:focus::placeholder{
                     color: transparent;
                 }
@@ -126,18 +146,19 @@ header {
         }
     }
     .companies-logos{
+        width:60%;
         display:flex;
         flex-wrap: wrap;
         justify-content: flex-start;
         line-height: $line-height;
-        font-size: $fs-n*.5;
-        padding: $padding-320;
-        margin-top: 10vh;
+        font-size: $fs-n*.7;
+        margin-left: 5rem;
+        margin-top: 0vh;
         list-style-type: none;
         font-weight: $fw-b;
         color: $social-bg;
         .company-item{
-            margin-right: 0.7rem;
+            margin-right: 1rem;
         }
     }
 }

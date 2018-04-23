@@ -23,7 +23,7 @@ gulp.task('css', function () {
     return gulp.src('src/css/**/*.css')
         .pipe(concat('style.css'))
         .pipe(cleanCSS())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('docs/css'))
 })
 
 gulp.task('js', function () {
@@ -50,9 +50,9 @@ gulp.task('sass', function () {
 
 gulp.task('img', function () {
     return gulp.src('./src/img/**/*.{jpg,jpeg,png,gif}')
-        .pipe(changed('dist/img'))
+        .pipe(changed('docs/img'))
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/img'))
+        .pipe(gulp.dest('docs/img'))
 })
 
 gulp.task('html', function () {
@@ -66,7 +66,7 @@ gulp.task('html', function () {
             sortClassName: true,
             collapseWhitespace: true
         }))
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest('docs/'))
 })
 
 gulp.task('serve', ['sass'], function () {
@@ -80,7 +80,7 @@ gulp.task('serve', ['sass'], function () {
 })
 
 gulp.task('clean', function () {
-    return del(['dist']);
+    return del(['docs']);
 })
 
 gulp.task('build', function () {

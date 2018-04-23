@@ -14,25 +14,31 @@ header {
             .logo-link{
                 display: flex;
                 flex-direction: row;
-                justify-content: space-around;
+                justify-content: flex-start;
                 align-items: center;
                 width: 40%;
                 height: inherit;
                 text-decoration: none;
-                margin-left: .5rem;
+                margin-left: 2rem;
                 .logo{
-                    height: 1.6rem;
-                    width: 1.6rem;
+                    height: 1.4rem;
+                    width: 1.4rem;
                 }
                 .title{
-                    font-size: $fs-n*0.9;
+                    font-size: $fs-n*0.8;
+                    @media (min-width: 351px) {
+                    font-size: $fs-n*0.85;
+                }
                     color: $text;
                 }
             }
             
             .fa-bars    {
                 position: fixed;
-                font-size: $fs-n*0.9;
+                font-size: $fs-n*0.8;
+                @media (min-width: 351px) {
+                    font-size: $fs-n*0.85;
+                }
                 margin-right: 1rem;
                 z-index: 21;
                 padding: 0.5rem;
@@ -61,6 +67,9 @@ header {
                     padding-right: 1rem;
                     margin-top: 4vh;
                     font-size: $fs-n*0.7;
+                    @media (min-width: 351px) {
+                    font-size: $fs-n*0.75;
+                }
                     .underline{
                         width: 7rem;
                         align-self: flex-end;
@@ -83,7 +92,10 @@ header {
             justify-content: center;
             align-items: center;
             .main-title{
-                font-size: $fs-b*0.4;
+                font-size: $fs-b*0.35;
+                @media (min-width: 351px) {
+                    font-size: $fs-b*0.4;
+                }
                 font-weight: $fw-b;
                 margin-top: 20vh;
                 margin-bottom: 0.5em;
@@ -91,7 +103,10 @@ header {
             .main-description{
                 font-family: $ff-ssp;
                 font-weight: $fw-l;
-                font-size: $fs-n*0.6;
+                font-size: $fs-n*0.5;
+                @media (min-width: 351px) {
+                    font-size: $fs-n*0.55;
+                }
                 line-height: 1.5em;
             }
         }
@@ -107,7 +122,10 @@ header {
                 outline:none;
                 border-bottom: 1px solid $social-bg;
                 padding-bottom: 0.3rem;
-                font-size: $fs-n*0.55;
+                font-size: $fs-n*0.5;
+                @media (min-width: 351px) {
+                    font-size: $fs-n*0.55;
+                }
                 &:focus::placeholder{
                     color: transparent;
                 }
@@ -120,7 +138,6 @@ header {
                 color: white;
                 background-color: $btn-color;
                 font-weight: $fw-b;
-                font-size: $fs-n*0.5;
                 border-radius: 2px;
                 padding: .7rem .6rem .7rem .6rem;
             }
@@ -129,9 +146,15 @@ header {
     .companies-logos{
         display:flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
+         @media (min-width: 351px) {
+                    justify-content: center;
+                }
         line-height: $line-height;
-        font-size: $fs-n*.6;
+        font-size: $fs-n*.5;
+        @media (min-width: 351px) {
+                    font-size: $fs-n*0.55;
+                }
         padding: $padding-320;
         margin-top: 10vh;
         list-style-type: none;
